@@ -38,5 +38,4 @@ RUN apt update -y \
 COPY --from=builder /opt/xmrig/build/xmrig /xmrig/xmrig
 # COPY --from=builder /opt/xmrig-cuda/build/libxmrig-cuda.so /xmrig/libxmrig-cuda.so
 
-ENV PATH /xmrig:$PATH
-CMD ["/xmrig/xmrig" "-c" "/xmrig/etc/config.json"]
+ENV PATH=/xmrig:$PATH
